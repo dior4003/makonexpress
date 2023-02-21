@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_check_lights",
+  "info": {
+    "displayName": "check-light",
+    "icon": "lightbulb",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::answer.answer"
+    }
+  }
+}

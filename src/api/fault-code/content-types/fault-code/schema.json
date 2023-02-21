@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fault_codes",
+  "info": {
+    "singularName": "fault-code",
+    "pluralName": "fault-codes",
+    "displayName": "Fault codes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "fmi": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "freightliner",
+        "volvo"
+      ],
+      "default": "freightliner"
+    }
+  }
+}

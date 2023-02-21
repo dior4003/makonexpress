@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "check_lights",
+  "info": {
+    "singularName": "check-light",
+    "pluralName": "check-lights",
+    "displayName": "Check light",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "items": {
+      "displayName": "check-light",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.check-light"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bot_users",
+  "info": {
+    "singularName": "bot-user",
+    "pluralName": "bot-users",
+    "displayName": "Drivers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "telegramUsername": {
+      "type": "string"
+    },
+    "telegramUserId": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "experience": {
+      "type": "decimal"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "truckModel": {
+      "type": "string"
+    },
+    "driverType": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rating.rating",
+      "inversedBy": "user"
+    },
+    "call_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::call-request.call-request",
+      "mappedBy": "user"
+    },
+    "isAdmin": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

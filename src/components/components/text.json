@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_texts",
+  "info": {
+    "displayName": "text",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

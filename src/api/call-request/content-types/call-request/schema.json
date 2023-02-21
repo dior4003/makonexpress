@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "call_requests",
+  "info": {
+    "singularName": "call-request",
+    "pluralName": "call-requests",
+    "displayName": "Call request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bot-user.bot-user",
+      "inversedBy": "call_requests"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "processing",
+        "resolved",
+        "rejected"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "problem": {
+      "type": "text"
+    },
+    "rejection_reason": {
+      "type": "text"
+    },
+    "history": {
+      "displayName": "history",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.history"
+    }
+  }
+}
